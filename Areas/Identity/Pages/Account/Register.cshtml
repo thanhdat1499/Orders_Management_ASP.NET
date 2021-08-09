@@ -1,0 +1,20 @@
+﻿@page
+@model RegisterModel
+
+@{
+    ViewData["Title"] = "Register Account";
+    Layout = "~/Areas/Identity/Pages/_LayoutPhanHeQTUser.cshtml";
+}
+
+<h1>Register Account</h1>
+
+<form asp-route-returnUrl="@Model.ReturnUrl" method="post">
+    Ho: <input asp-for="Input.FirstName" />
+    Ten: <input asp-for="Input.LastName" />
+    Dt: <input asp-for="Input.Phone" />
+    Email: <input asp-for="Input.Email" />
+    Password: <input asp-for="Input.Password" />
+    Confirm: <input asp-for="Input.ConfirmPassword" />
+    <button type="submit">Register</button>
+
+</form>

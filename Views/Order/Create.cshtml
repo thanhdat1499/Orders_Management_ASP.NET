@@ -1,0 +1,12 @@
+﻿@model DemoIndentityCore.Entities.Order
+
+<h1>Create Order Page</h1>
+
+<form asp-controller="Order" asp-action="Create" method="post" enctype="multipart/form-data">
+    Email: <select asp-for="UserId" class="form-control"
+                    asp-items="@(new SelectList(@ViewBag.listofUser,"Id","UserName"))"></select>
+    Car Name: <select asp-for="CarId" class="form-control"
+                    asp-items="@(new SelectList(@ViewBag.listofCar,"CarId","CarName"))"></select>
+
+    <input type="submit" value="Add new" />
+</form>

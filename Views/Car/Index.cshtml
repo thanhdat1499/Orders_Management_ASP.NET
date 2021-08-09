@@ -1,0 +1,47 @@
+﻿@model IEnumerable<DemoIndentityCore.Entities.Car>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>View all product</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Price
+            </th>
+            <th>
+                Photo
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var car in Model)
+        {
+            <tr>
+                <td>
+                    @car.CarId
+                </td>
+                <td>
+                    @car.CarName
+                </td>
+                <td>
+                    @car.Price
+                </td>
+                <td>
+                    <img src="~/images/@car.Photo" width="400" height="250" />
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
